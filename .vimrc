@@ -14,80 +14,21 @@ Plugin 'vim-scripts/L9'
 " ==== File tree
 Plugin 'scrooloose/nerdtree'
 
-" ==== Git
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-
 " ==== syntax helpers
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
-Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/yajs.vim'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'ap/vim-css-color'
 Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " ==== moving / searching
 Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 
-" ==== snippets
-Plugin 'SirVer/ultisnips'
-
 " Status bar on bottom
-Plugin 'bling/vim-airline'
-
-" ==== PLUGIN THEMES
-Plugin 'morhetz/gruvbox'
-
-call vundle#end()
-filetype plugin indent on
-
-" ==== Colors and other basic settings
-colorscheme gruvbox
-set guifont=Monospace\ 10
-set nocompatible  " be iMproved, required
-filetype off  " required
-set exrc
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" ==== plugin manager
-Plugin 'VundleVim/Vundle.vim'
-
-" ==== helpers
-Plugin 'vim-scripts/L9'
-
-" ==== File tree
-Plugin 'scrooloose/nerdtree'
-
-" ==== Git
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-
-" ==== syntax helpers
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'othree/yajs.vim'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'ap/vim-css-color'
-Plugin 'Vimjas/vim-python-pep8-indent'
-
-" ==== moving / searching
-Plugin 'easymotion/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
-
-" ==== snippets
-Plugin 'SirVer/ultisnips'
-
-" Status bar on bottom
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 
 " ==== PLUGIN THEMES
 Plugin 'morhetz/gruvbox'
@@ -150,13 +91,6 @@ endif
 " === flake8
 let g:flake8_show_in_file=1
 
-" ==== snippets
-let g:UltiSnipsExpandTrigger="<A-ENTER>"
-let g:UltiSnipsJumpForwardTrigger="<A-ENTER>"
-let g:UltiSnipsJumpBackwardTrigger="<A-BACKSPACE>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 " ==== Easymotion
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
@@ -165,7 +99,9 @@ nmap f <Plug>(easymotion-s)
 " ==== moving around
 
 " ==== disable mouse
-"== set mouse=c
+set mouse=c
+
+" ==== Custom Mappings
 nmap <c-h> :bp<CR>
 nmap <c-l> :bn<CR>
 nmap <c-j> :bd!<CR>
